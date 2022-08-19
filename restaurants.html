@@ -13,25 +13,40 @@
         <p class="heading-paragraph">You can select the restaurant you are currently at, and proceed...</p>
         <h1 class="title">Restaurants</h1>
 
-        <button>
-            <span class="names">Tashir Pizza</span>
-            <img />
-        </button>
-        <button>
-            <span class="names">SAS Foodcourt</span>
-            <img />
-        </button>
-        <button>
-            <span class="names">Vostan</span>
-            <img />
-        </button>
-        <button>
-            <span class="names">Bear Academy</span>
-            <img />
-        </button>
+        <div id="buttons">
+
+        </div>
     </div>
 
 
+    <script>
+        let restaurants = ["Tashir Pizza", "SAS Foodcourt", "Vostan", "Bear Academy"];
+        createList(restaurants);
+
+
+        function createList(restaurants) {
+            
+            let buttons = document.getElementById('buttons');
+            for(let i = 0; i < restaurants.length; i ++) {
+                console.log(restaurants[i]);
+                let newButton = createButton(restaurants[i]);
+                buttons.append(newButton);
+            }
+        }
+
+        function createButton(restaurant) {
+            let newButton = document.createElement('button');
+            let name = createName(restaurant);
+            newButton.append(name);
+            return newButton;
+        }
+
+        function createName(restaurant) {
+            let name = document.createElement('span');
+            name.textContent = restaurant;
+            return name;
+        }
+    </script>
 
 </body>
 </html>
