@@ -1,0 +1,23 @@
+
+
+button {
+    display: flex;
+    color: Green;
+    background-color: beige;
+    width: 60%;
+    border-color: green;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h1 {
+    color: crimson;
+
+}
