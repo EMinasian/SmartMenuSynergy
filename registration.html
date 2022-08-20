@@ -1,12 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="registrationStyle.css" />
+    <title>Sign In/Up</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
 </head>
 <body>
-    
+<div class="container">
+    <div class="forms-container">
+        <div class="signin-signup">
+            <form action="#" class="sign-in-form" id="signInForm" target="_blank">
+                <h2 class="title">Sign in</h2>
+                <div class="input-field">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Username" id="signInusername" required/>
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password" id="signInpassword" required/>
+                </div>
+                <div class="error" id="errorID">Wrong username or password</div>
+                <input type="button" value="Login" class="btn solid" id="signInButton"/>
+                <p class="social-text">Or Sign in with social platforms</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fa fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fa fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </form>
+            <form action="#" class="sign-up-form" id="signUpForm" target="_blank">
+                <h2 class="title">Sign up</h2>
+                <div class="input-field">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Username" id="signUpusername" required/>
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Email" id="signUpemail" required/>
+                </div>
+                <div class="input-field">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password" id="signUppassword" required/>
+                </div>
+                <input type="submit" class="btn" value="Sign up" id="signUpButton" />
+                <p class="social-text">Or Sign up with social platforms</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fa fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fa fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>Hello, Friend!</h3>
+                <p>
+                    Enter your personal details and start a journey with us
+                </p>
+                <button class="btn transparent" id="sign-up-btn">
+                    Sign up
+                </button>
+            </div>
+        </div>
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>Welcome Back!</h3>
+                <p>
+                    To keep connected with us please login with your personal info
+                </p>
+                <button class="btn transparent" id="sign-in-btn">
+                    Sign in
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="registrationScript.js"></script>
 </body>
 </html>
