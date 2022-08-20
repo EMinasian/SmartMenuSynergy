@@ -40,7 +40,7 @@ signUp.addEventListener('click', function setToStorage(event) {
     let password = document.getElementById("signUppassword");
     let user = new User(username.value, email.value, password.value);
     localStorage.setItem(`${index}`, JSON.stringify(user));
-    document.getElementById("signUpForm").action = "https://www.google.com/";
+    document.getElementById("signUpForm").action = "./restaurants.html";
 });
 
 let signIn = document.getElementById("signInButton");
@@ -64,6 +64,6 @@ signIn.addEventListener('click', function checkInStorage(event) {
         document.getElementById("errorID").style.display='block';
     } else {
         document.getElementById("signInButton").type='submit';
-        document.getElementById("signInForm").action = "https://www.google.com/";
+        document.getElementById("signInForm").action = "./restaurants.html";
     }
 })
