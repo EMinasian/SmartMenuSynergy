@@ -12,32 +12,63 @@
         <div class="chat-heading" id="chat-heading">
             <h12>Waiter Name</h2>
         </div>
-        <div class="chat-background">
+        <div class="chat-background" id="chat-background">
         </div>
         <div class="writing-section">
-            <input type="text">
-            <button type="submit">Send</button>
+            <textarea type="text" id="chat-input"></textarea>
+            <button type="submit" onclick="sendChat()">Send</button>
         </div>
     </div>
 
     <script>
-        // let waiters = ["Tigran Khachatryan", "Anna Mirzoyan", "Anush Girgoryan", "Arman Isajanyan"];
+        
 
-        // function makeWaiter() {
-        //     let heading = document.getElementById("chat-heading");
-        //     let waiter = waiters[randomInteger(0, 3)];
-        //     let waiterName = makeWaiterName(waiter);
-        //     heading.append(waiterName);
-        // }
+        function sendChat() {
+            let inputValue = document.querySelector(`[id="chat-input"]`).value;
+            let chat = document.getElementById("chat-background");
+            let newMessage = createMessage(inputValue);
+            chat.append(newMessage)
+            document.getElementById("chat-input").value = "";
+            
+            let newReply = reply();
+            setTimeout(()=> {chat.append(newReply);}, 1000);
+            
+        }
 
-        // function makeWaiterName(waiter) {
+        function createMessage(value) {
+            let message = document.createElement("p");
+            message.textContent = value;
+            console.log(message);
+            return message;
+        }
 
-        // }
+        function reply() {
+            let replies = ["Hello", "Yes", "No", "Welcome", "Ok"];
+            let reply = replies[randomInteger(0, 4)];
+            return createMessage(reply);
+        }
+
+        
+        makeWaiter();
+
+        function makeWaiter() {
+            let waiters = ["Tigran Khachatryan", "Anna Mirzoyan", "Anush Girgoryan", "Arman Isajanyan"];
+            let heading = document.getElementById("chat-heading");
+            let waiterName = waiters[randomInteger(0, 3)];
+            let waiter = makeWaiterName(waiterName);
+            heading.append(waiter);
+        }
+
+        function makeWaiterName(waiterName) {
+            let waiter = document.createElement("p");
+            waiter.textContent = waiterName;
+            return waiter;
+        }
 
 
-        // function randomInteger(min, max) {
-        //     return Math.floor(Math.random() * (max + 1 - min) + min);
-        // }
+        function randomInteger(min, max) {
+            return Math.floor(Math.random() * (max + 1 - min) + min);
+        }
         
     </script>
 </body>
