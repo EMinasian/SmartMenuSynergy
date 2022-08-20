@@ -1,0 +1,253 @@
+/*
+    2b2d42
+    8d99ae
+    edf2f4
+*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+}
+
+.root{
+    background-color: #ffffff;
+    padding:  80px 20px 80px 20px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: #ff4400;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.restaurantInfo{
+    display: flex;
+}
+
+.logo{
+    width: 40px;
+    margin-right: 10px;
+}
+
+
+.searchButton{
+    width: 30px;
+    height: 30px;
+    background-image: url("https://www.citypng.com/public/uploads/small/11640439066gvdicej5lgzwysh67xgewiixiqsmd6phvcidruhbvrizlpwtl7qhjckdiizpl7lvj3dgyl780ezhsdo2yp6bqe8tvg7eqvaa1p6n.png");
+    background-size: 100% 100%;
+}
+
+.searchContainer{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    display: none;
+}
+
+.footer{
+    width: 100%;
+    height: 60px;
+    background-color: #ff4400;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.restourant-title{
+    color: #ffffff;
+    font-family: 'Barlow', sans-serif;
+}
+
+.contact{
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.call,.chat{
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product{
+    width: 400px;
+    height: 300px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-size: 400px 300px;
+    object-fit: scale-down;
+}
+
+.product-info{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.541) 20%,rgba(0, 0, 0, 0.98) 90%);
+    color: white;
+    gap: 10px;
+}
+
+.buy-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price:before{
+    content: "$ ";
+    color: #ff4400;
+}
+
+.product img{
+    width: 150px;
+    height: 150px;
+}
+
+.product h2{
+    font-size: 25px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.product-description{
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+}
+
+.price{
+    font-size: 30px;
+    font-family: 'Barlow', sans-serif;
+}
+
+
+.product button{
+    width: 100px;
+    height: 40px;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: #ff4400;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-family: 'Barlow', sans-serif;
+}
+
+.basket{
+    width: 40px;
+
+}
+
+
+.basket-icon-container{
+    width: 40px;
+    height: 30px;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.basket-count{
+    width: 25px;
+    height: 25px;
+    box-sizing: content-box;
+    background-color:  #393E46;
+    color: #F6F8FB;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.basket{
+    width: 40px;
+    height: 35px;
+}
+
+.callOkContainer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.72);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: callOkContainerAnimation;
+    animation-duration: 0.5s;
+    display: none;
+}
+
+@keyframes callOkContainerAnimation{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.callOk{
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    color: green;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    align-items: center;
+    border-radius: 5px;
+    font-family: 'Barlow', sans-serif;
+    animation-name: callOkAnimation;
+}
