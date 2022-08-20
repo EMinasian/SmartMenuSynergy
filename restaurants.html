@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="restaurantsStyles.css">
+</head>
+<body>
+    <div class = container>
+        <h2 class="heading-title">Where are you?</h2>
+        <p class="heading-paragraph">You can select the restaurant you are currently at, and proceed...</p>
+        <h1 class="title">Restaurants</h1>
+
+        <div id="buttons">
+
+        </div>
+    </div>
+
+
+    <script>
+        let restaurants = ["Tashir Pizza", "SAS Foodcourt", "Vostan", "Bear Academy"];
+        createList(restaurants);
+
+
+        function createList(restaurants) {
+            
+            let buttons = document.getElementById('buttons');
+            for(let i = 0; i < restaurants.length; i ++) {
+                console.log(restaurants[i]);
+                let newButton = createButton(restaurants[i]);
+                buttons.append(newButton);
+            }
+        }
+
+        function createButton(restaurant) {
+            let newButton = document.createElement('button');
+            let name = createName(restaurant);
+            newButton.append(name);
+            return newButton;
+        }
+
+        function createName(restaurant) {
+            let name = document.createElement('span');
+            name.textContent = restaurant;
+            return name;
+        }
+    </script>
+
+</body>
+</html>
