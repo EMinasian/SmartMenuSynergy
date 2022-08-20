@@ -60,8 +60,10 @@ signIn.addEventListener('click', function checkInStorage(event) {
         }
     }
     if (hasSignedUp === false) {
-        alert("Sign up please");
+        document.getElementById("signInButton").type='button';
+        document.getElementById("errorID").style.display='block';
     } else {
+        document.getElementById("signInButton").type='submit';
         document.getElementById("signInForm").action = "https://www.google.com/";
     }
 })
