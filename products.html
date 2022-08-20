@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,117 +6,38 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="products-page.css">
+    <link rel="stylesheet" href="products.css">
     <title>Document</title>
 </head>
 <body>
 <div class="root">
     <div class="header">
-        <h1 class="restourant-title">Tashir Pizza</h1>
-        <div class="contact">
-            <button class="call">
-                Call
-            </button>
-            <button class="chat">
-                Chat
-            </button>
+        <div class="restaurantInfo">
+            <img src="https://www.tashirpizza.am/assets/images/logos/tashir_pizza.svg" alt="" class="logo">
+            <h1 class="restourant-title">Tashir Pizza</h1>
         </div>
+
     </div>
-    <div class="content">
-        <div class="product">
-            <img src="https://cdn.picpng.com/pizza/pizza-view-27478.png" alt="">
-            <h2>Product Name</h2>
-            <span>Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                    Animi asperiores dolore eaque
-                </span>
-            <button>Buy</button>
-        </div>
-        <div class="product">
-            <img src="https://cdn.picpng.com/pizza/pizza-view-27478.png" alt="">
-            <h2>Product Name</h2>
-            <span>Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                    Animi asperiores dolore eaque
-                </span>
-            <button>Buy</button>
-        </div>
-        <div class="product">
-            <img src="https://cdn.picpng.com/pizza/pizza-view-27478.png" alt="">
-            <h2>Product Name</h2>
-            <span>Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                    Animi asperiores dolore eaque
-                </span>
-            <button>Buy</button>
-        </div>
-        <div class="product">
-            <img src="https://cdn.picpng.com/pizza/pizza-view-27478.png" alt="">
-            <h2>Product Name</h2>
-            <span>Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                    Animi asperiores dolore eaque
-                </span>
-            <button>Buy</button>
-        </div>
-        <div class="product">
-            <img src="https://cdn.picpng.com/pizza/pizza-view-27478.png" alt="">
-            <h2>Product Name</h2>
-            <span>Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                    Animi asperiores dolore eaque
-                </span>
-            <button>Buy</button>
-        </div>
-        <div class="product">
-            <img src="https://cdn.picpng.com/pizza/pizza-view-27478.png" alt="">
-            <h2>Product Name</h2>
-            <span>Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                    Animi asperiores dolore eaque
-                </span>
-            <button>Buy</button>
-        </div>
-        <div class="product">
-            <img src="https://cdn.picpng.com/pizza/pizza-view-27478.png" alt="">
-            <h2>Product Name</h2>
-            <span>Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                    Animi asperiores dolore eaque
-                </span>
-            <button>Buy</button>
-        </div>
-        <div class="product">
-            <img src="https://cdn.picpng.com/pizza/pizza-view-27478.png" alt="">
-            <h2>Product Name</h2>
-            <span>Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                    Animi asperiores dolore eaque
-                </span>
-            <button>Buy</button>
-        </div>
-        <div class="product">
-            <img src="https://cdn.picpng.com/pizza/pizza-view-27478.png" alt="">
-            <h2>Product Name</h2>
-            <span>Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                    Animi asperiores dolore eaque
-                </span>
-            <button>Buy</button>
-        </div>
-        <div class="product">
-            <img src="https://cdn.picpng.com/pizza/pizza-view-27478.png" alt="">
-            <h2>Product Name</h2>
-            <span>Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit.
-                    Animi asperiores dolore eaque
-                </span>
-            <button>Buy</button>
-        </div>
-    </div>
+    <div class="content" id="content"></div>
     <div class="footer">
-        <div class="barcet"></div>
+        <div class="contact">
+            <img id="call" src="https://flaticons.net/icon.php?slug_category=miscellaneous&slug_icon=bell" alt="" class="call">
+            <img id="chat" src="https://icon-library.com/images/chat-icon-white/chat-icon-white-28.jpg" alt="" class="chat">
+        </div>
+        <a href="#">
+            <div class="basket-icon-container">
+                <img class="basket" src="https://icon-library.com/images/white-shopping-cart-icon-png/white-shopping-cart-icon-png-19.jpg"></img>
+                <div class="basket-count" id="basket-count">0</div>
+            </div>
+        </a>
     </div>
 </div>
+
+<div class="callOkContainer" id="callOkContainer">
+    <div class="callOk">Call OK</div>
+</div>
+
+<script src="products.js"></script>
+
 </body>
 </html>
