@@ -62,8 +62,19 @@ let tashir = new Restaurant("Tashir", "https://www.tashirpizza.am/assets/images/
 getRestaurant(tashir);
 
 function addToBasket(prod) {
-    let i = localStorage.length;
-    localStorage.setItem(i+"", JSON.stringify(prod));
+    if (localStorage.getItem("num") === null) {
+        localStorage.setItem("num", "0");
+    }
+    let i = localStorage.getItem("num");
+    localStorage.setItem("num", +i + 1 + "");
+    localStorage.setItem(i, JSON.stringify(prod));
+}
+function drawTable() {
+    let n = +localStorage.getItem("num");
+    for (let i = 0; i < n; i++) {
+        let prod = JSON.parse(localStorage.getItem(i+""));
+        createRow(prod);
+    }
 }
 function createCell(data) {
     const cell = document.createElement('td');
