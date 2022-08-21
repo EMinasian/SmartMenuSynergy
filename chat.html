@@ -12,10 +12,10 @@
         <div class="chat-heading" id="chat-heading">
             <h12>Waiter Name</h2>
         </div>
-        <div class="chat-background">
-            <div class="chat-box" id="chat-box">
-            </div>
+
+        <div class="chat-box" id="chat-box">
         </div>
+        
         <div class="writing-section">
             <textarea type="text" id="chat-input"></textarea>
             <button type="submit" onclick="sendChat()">Send</button>
@@ -32,7 +32,6 @@
             newMessage.classList.add("message");
             chat.append(newMessage)
             document.getElementById("chat-input").value = "";
-            
             let newReply = reply();
             newReply.classList.add("reply");
             newReply.style.textAlign = "left";
