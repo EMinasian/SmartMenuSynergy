@@ -3,7 +3,7 @@
 
 // console.log(restaurants);
 
-let restaurants = ["Tashir Pizza", "SAS Foodcourt", "Vostan", "Bear Academy"];
+let restaurants = ["Tashir Pizza", "SAS Foodcourt", "Vostan", "Bear Academy", "AUA FoodCourt", "Lahmajo Tun", "Mirzoyan Library", "name1"];
 
 
 createList(restaurants);
