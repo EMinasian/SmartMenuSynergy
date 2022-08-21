@@ -23,8 +23,11 @@
             <div class="contact">
             <a href="./chat.html">
                 <img src="https://flaticons.net/icon.php?slug_category=miscellaneous&slug_icon=bell" alt="" class="call">
-            </a>    
+            </a>
+            <button id="call-button" onclick="callWaiter()">
                 <img src="https://icon-library.com/images/chat-icon-white/chat-icon-white-28.jpg" alt="" class="chat">
+            </button>    
+                
             </div>
             <a href="#">
                 <div class="basket-icon-container">
@@ -33,9 +36,10 @@
                 </div>
             </a>
         </div>
+        
     </div>
-    <script src="basket.js">
-
-    </script>
+    <div id="message-box"></div>
+    <script src="basket.js"></script>
+    <script src="callWaiter.js"></script>
 </body>
 </html>
