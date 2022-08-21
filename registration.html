@@ -1,19 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link rel="stylesheet" href="registrationStyle.css" />
+    <link rel="stylesheet" href="registrationStyle.css"/>
     <title>Sign In/Up</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
 </head>
 <body>
-<div class="container">
+<div id="forgotPasswordContainer" class="forgot-password-container">
+    <div class="forgot-password-block">
+        <button id="closeForgotPasswordContainer" class="close-forgot-password-container">x</button>
+        <input type="email" placeholder="Email" name="" id="FPemail" required>
+        <input type="password" placeholder="New Password" name="" id="FPnewPassword" required>
+        <input type="password" placeholder="Confirm Password" name="" id="FPconfirmPassword" required>
+        <div class="error" id="FPerror">Wrong password confirmed or no such user</div>
+        <button id="next" class="next">Next</button>
+    </div>
+</div>
+<div class="container" id="container">
     <div class="forms-container">
         <div class="signin-signup">
-            <form action="#" class="sign-in-form" id="signInForm" target="_blank">
+            <form action="#" class="sign-in-form" id="signInForm">
                 <h2 class="title">Sign in</h2>
                 <div class="input-field">
                     <i class="fa fa-user"></i>
@@ -23,25 +34,11 @@
                     <i class="fa fa-lock"></i>
                     <input type="password" placeholder="Password" id="signInpassword" required/>
                 </div>
+                <div class="forgot-password" id="forgotPassword">Forgot Password?</div>
                 <div class="error" id="errorID">Wrong username or password</div>
                 <input type="button" value="Login" class="btn solid" id="signInButton"/>
-                <p class="social-text">Or Sign in with social platforms</p>
-                <div class="social-media">
-                    <a href="#" class="social-icon">
-                        <i class="fa fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa fa-google"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </div>
             </form>
-            <form action="#" class="sign-up-form" id="signUpForm" target="_blank">
+            <form action="#" class="sign-up-form" id="signUpForm">
                 <h2 class="title">Sign up</h2>
                 <div class="input-field">
                     <i class="fa fa-user"></i>
@@ -55,22 +52,8 @@
                     <i class="fa fa-lock"></i>
                     <input type="password" placeholder="Password" id="signUppassword" required/>
                 </div>
-                <input type="submit" class="btn" value="Sign up" id="signUpButton" />
-                <p class="social-text">Or Sign up with social platforms</p>
-                <div class="social-media">
-                    <a href="#" class="social-icon">
-                        <i class="fa fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa fa-google"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </div>
+                <div class="error" id="error1ID">You already have an account. Sign in please</div>
+                <input type="button" class="btn" value="Sign up" id="signUpButton"/>
             </form>
         </div>
     </div>
@@ -78,6 +61,7 @@
     <div class="panels-container">
         <div class="panel left-panel">
             <div class="content">
+                 <div class="logo-left">
                 <h3>Hello, Friend!</h3>
                 <p>
                     Enter your personal details and start a journey with us
@@ -85,6 +69,8 @@
                 <button class="btn transparent" id="sign-up-btn">
                     Sign up
                 </button>
+            </div>
+            <img src="application_logo.png" alt="not found" class="logo">
             </div>
         </div>
         <div class="panel right-panel">
@@ -96,6 +82,7 @@
                 <button class="btn transparent" id="sign-in-btn">
                     Sign in
                 </button>
+
             </div>
         </div>
     </div>
