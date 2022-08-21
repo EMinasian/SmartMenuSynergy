@@ -18,7 +18,7 @@
         
         <div class="writing-section">
             <textarea type="text" id="chat-input"></textarea>
-            <button type="submit" onclick="sendChat()">Send</button>
+            <button type="submit" onclick="sendChat()" class="submit-button">Send</button>
         </div>
     </div>
 
@@ -35,8 +35,9 @@
             let newReply = reply();
             newReply.classList.add("reply");
             newReply.style.textAlign = "left";
-            setTimeout(()=> {chat.append(newReply);}, 1000);
-            
+            chat.scrollTop = chat.scrollHeight;
+            setTimeout(()=> {chat.append(newReply);
+                chat.scrollTop = chat.scrollHeight;}, 1000);
         }
 
         function createMessage(value) {
