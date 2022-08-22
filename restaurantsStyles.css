@@ -8,7 +8,7 @@
     padding: 0;
 }
 
-button {
+a, button {
     display: flex;
     background-color: #f9c6b3;
     width: 60%;

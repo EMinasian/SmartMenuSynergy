@@ -21,13 +21,21 @@ function createList(restaurants) {
 
 function createButton(restaurant) {
     let newButton = document.createElement('button');
+    let link = document.createElement('a');
     let name = createName(restaurant);
     newButton.append(name);
-    return newButton;
+    link.append(newButton);
+    newButton.setAttribute("onclick", "goToMenu()");
+    link.setAttribute("href", "./menu.html");
+    return link;
 }
 
 function createName(restaurant) {
     let name = document.createElement('span');
     name.textContent = restaurant;
     return name;
+}
+
+function goToMenu() {
+    // localStorage.setItem("restaurant", name)
 }
