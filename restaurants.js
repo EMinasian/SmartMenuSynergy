@@ -25,7 +25,7 @@ function createButton(restaurant) {
     newButton.append(name);
     link.append(newButton);
     newButton.setAttribute("onclick", "goToMenu(this.textContent)");
-    link.setAttribute("href", "./menu");
+    link.setAttribute("href", "./menu.html");
     return link;
 }
 

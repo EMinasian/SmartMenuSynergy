@@ -57,8 +57,9 @@ creatCategoryDOM(pasta);
 creatCategoryDOM(dessert);
 creatCategoryDOM(drinks);
 
+let restaurantName = localStorage.getItem("restaurant");
 
-let tashir = new Restaurant("Tashir", "https://www.tashirpizza.am/assets/images/logos/tashir_pizza.svg");
+let tashir = new Restaurant(restaurantName, "https://www.tashirpizza.am/assets/images/logos/tashir_pizza.svg");
 getRestaurant(tashir);
 
 function addToBasket(prod) {
