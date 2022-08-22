@@ -24,8 +24,8 @@ function createButton(restaurant) {
     let name = createName(restaurant);
     newButton.append(name);
     link.append(newButton);
-    newButton.setAttribute("onclick", `goToMenu(${restaurant})`);
-    link.setAttribute("href", "./menu.html");
+    newButton.setAttribute("onclick", "goToMenu(this.textContent)");
+    link.setAttribute("href", "./menu");
     return link;
 }
 
@@ -36,6 +36,5 @@ function createName(restaurant) {
 }
 
 function goToMenu(name) {
-    console.log(name);
     localStorage.setItem("restaurant", name)
 }
