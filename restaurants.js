@@ -13,7 +13,6 @@ function createList(restaurants) {
     
     let buttons = document.getElementById('buttons');
     for(let i = 0; i < restaurants.length; i ++) {
-        console.log(restaurants[i]);
         let newButton = createButton(restaurants[i]);
         buttons.append(newButton);
     }
@@ -25,8 +24,8 @@ function createButton(restaurant) {
     let name = createName(restaurant);
     newButton.append(name);
     link.append(newButton);
-    newButton.setAttribute("onclick", "goToMenu()");
-    link.setAttribute("href", "./menu.html");
+    newButton.setAttribute("onclick", `goToMenu(${restaurant})`);
+    // link.setAttribute("href", "./menu.html");
     return link;
 }
 
@@ -36,6 +35,7 @@ function createName(restaurant) {
     return name;
 }
 
-function goToMenu() {
-    // localStorage.setItem("restaurant", name)
+function goToMenu(name) {
+    console.log(name);
+    localStorage.setItem("restaurant", name)
 }
